@@ -1,0 +1,50 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="/js/game.js"></script>
+</head>
+<body>
+<h2>Game</h2>
+<div ng-controller="TodoListController as todoList">
+
+     <label>Lesson ID</label>
+     <input type="text" name="lessonId" class="form-control" ng-model="todoList.lessonId"/>
+
+     <label>Game ID</label>
+     <input type="text" name="gameId" class="form-control" ng-model="todoList.gameId"/>
+     
+     <label>Game Name</label>
+     <input type="text" name="name" class="form-control" ng-model="todoList.gameName"/>
+  
+     <label>Game Description</label>  
+     <input type="text" name="description" class="form-control" ng-model="todoList.gameDescription"/>
+  
+     <label>Game Type</label>
+     <input type="text" name="type" class="form-control" ng-model="todoList.gameType"/>
+
+    [ <a href="" ng-click="todoList.post()">post</a> ]
+    <ul class="unstyled">
+        <li ng-repeat="todo in todoList.todos">
+            <label class="checkbox">
+                <span >{{todo.score}}</span>
+                <br>
+                <span >{{todo.type}}</span>
+                <br>
+                <span >{{todo.content}}</span>
+                <br>
+                <span >{{todo.answer1}}</span>
+            </label>
+        </li>
+    </ul>
+    
+    <form ng-submit="todoList.addQ()">
+        <input type="text" ng-model="todoList.score" size="30" placeholder="add score here">
+        <input type="text" ng-model="todoList.type" size="30" placeholder="add TF here">
+        <input type="text" ng-model="todoList.content" size="30" placeholder="add TF Content here">
+        <input type="text" ng-model="todoList.answer1" size="30" placeholder="add T/F here">
+        <input class="btn-primary" type="submit" value="add">
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+1,S,mina,mina@yahoo.com,20140275,Male,20
+2,S,mahmoud,mahmoud@yahoo.com,20140275,Male,20
+3,S,mostafa,mostafa@yahoo.com,20140275,Male,20
+4,S,salah,salah@gmail.com,123,Male,20
+5,T,ahmed,ahmed@yahoo.com,123,male,20
+6,S,tata,ata@gmail.com,123,Male,18

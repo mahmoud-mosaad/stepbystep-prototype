@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+</head>
+<body ng-app="app" ng-controller="getonecontroller">
+
+	<div ng-controller="getonecontroller">
+
+          <label>Course ID</label>
+            <input type="number" name="courseid" class="form-control" ng-model="courseid"/>
+
+        <button id="btn-id" ng-click="getfunction()">Get One Course</button>
+
+    </div>
+
+
+	<p id="displayData1"  />
+	<p id="displayData2"  />
+
+	<p id="displayData3"  />
+
+	<script type="text/javascript">
+	var app = angular.module('app', []);
+	app.controller('getonecontroller', function($scope, $http, $location) {
+	    $scope.getfunction = function(){
+	        var url = '/courses/' + $scope.courseid;
+	        
+	        var config = {
+	                headers : {
+	                    'Content-Type': 'application/json;charset=utf-8;'
+	                }
+	        }
+
+	        $http.get(url, config).then(function (response) {
+	            $scope.response = response.data;
+	            $('#displayData3').html(response.data.id);
+	            $('#displayData1').html(response.data.name);
+            	$('#displayData2').html(response.data.description);
+	        }, function (response) {
+	            $scope.getResultMessage = "Fail!";
+	        });
+	    }
+	});
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+</head>
+<body ng-app="app" ng-controller="getTopicsController">
+
+	<div ng-controller="getTopicsController">
+        <button id="btn-id" ng-click="getTopicsFunction()">Get All Topics</button>
+         
+        <ul>
+            <li ng-repeat="topic in response">{{topic.name + " " + topic.description}}</li>
+        </ul>
+         
+    </div>
+
+	<script type="text/javascript">
+	var app = angular.module('app', []);
+	app.controller('getTopicsController', function($scope, $http, $location) {
+	    $scope.getTopicsFunction = function(){
+	        var url = '/topics'; //$location.absUrl() + "getallcustomer";
+
+	        var config = {
+	                headers : {
+	                    'Content-Type': 'application/json;charset=utf-8;',
+	                }
+	        }
+	        
+	        $http.get(url, config).then(function (response) {
+	            $scope.response = response.data;
+	         	console.log("success???");
+	        }, function (response) {
+	            $scope.getResultMessage = "Fail!";
+	        });
+	    }
+	});
+	
+	
+	</script>
+
+	<!--
+
+
+    <input type="button" value="Get Data" ng-click="showData()" />
+    <p id="displayData" />
+
+    <script type="text/javascript">
+        angular.module('TopicApp', [])
+        .controller('TopicController', function($http, $scope) {
+          $scope.showData = function() {
+            $http({
+              method : 'GET',
+              url : '/topics'
+            }).then(function(response) {
+            	$('#displayData').html(JSON.stringify(response.data));
+            });
+          }
+        });
+    </script>
+    
+    -->
+    
+</body>
+</html>

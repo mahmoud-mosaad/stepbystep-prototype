@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+</head>
+<body ng-app="app" ng-controller="getonecontroller">
+
+	<div ng-controller="getonecontroller">
+	      <label>Question ID</label>  
+          <input type="number" name="id" class="form-control" ng-model="id"/>
+    
+        <button id="btn-id" ng-click="getfunction()">Get One Question</button>
+         
+    </div>
+	{{getResultMessage}}
+	
+	<p id="displayData1"  />
+	
+	<p id="displayData3"  />
+	
+	<p id="displayData4"  />
+
+	<script type="text/javascript">
+	var app = angular.module('app', []);
+	app.controller('getonecontroller', function($scope, $http, $location) {
+	    $scope.getfunction = function(){
+	        var url = '/questions/' + $scope.id;
+	        
+	        var config = {
+	                headers : {
+	                    'Content-Type': 'application/json;charset=utf-8;'
+	                }
+	        }
+	         
+	        $http.get(url, config).then(function (response) {
+	            $scope.response = response.data;
+	            $('#displayData3').html(response.data.id);
+	            $('#displayData1').html(response.data.score);
+                $('#displayData4').html(response.data.type);
+	            $scope.getResultMessage = "Successful!";
+
+	        }, function (response) {
+	            $scope.getResultMessage = "Fail!";
+	        });
+	    }
+	});
+	
+	
+	</script>
+</body>
+</html>

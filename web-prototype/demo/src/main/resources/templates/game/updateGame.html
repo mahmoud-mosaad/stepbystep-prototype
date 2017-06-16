@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+</head>
+<body ng-app="app" ng-controller="putController">
+
+   <div ng-controller="putController">
+        <form name="topicForm" ng-submit="submitForm()">
+            <label>ID</label>  
+            <input type="number" name="id" class="form-control" ng-model="id"/>
+             <label>Name</label>
+            <input type="text" name="name" class="form-control" ng-model="name"/>
+            <label>Description</label>  
+            <input type="text" name="description" class="form-control" ng-model="description"/>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+     
+
+    <script type="text/javascript">
+    var app = angular.module('app', []);
+    app.controller('putController', function($scope, $http, $location) {
+        $scope.submitForm = function(){
+            var url = '/games/' + $scope.id;
+            
+            var config = {
+                    headers : {
+                        'Content-Type': 'application/json;charset=utf-8;'
+                    }
+            }
+            var data = {
+            	id: $scope.id,
+            	name: $scope.name,
+            	description: $scope.description
+            };
+             
+             
+            $http.put(url, data, config).then(function (response) {
+                $scope.postResultMessage = "Sucessful!";
+            }, function (response) {
+                $scope.postResultMessage = "Fail!";
+            });
+             
+            $scope.id = "";
+            $scope.name = "";
+            $scope.description = "";
+            
+        }
+    });
+    </script>
+</body>
+</html>

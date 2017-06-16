@@ -1,0 +1,2 @@
+1,A statement in java ends with ;,T,F
+2,to print a value use System.in ,F,T

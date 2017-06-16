@@ -1,0 +1,127 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="/js/game.js"></script>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="free-educational-responsive-web-template-webEdu">
+	<meta name="author" content="webThemez.com">
+	
+	<title>Free School Responsive Web Template Kiddo</title>
+	<link rel="favicon" href="/assets/images/favicon.png">
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/style2.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/cLogo.css">
+	<link href="https://fonts.googleapis.com/css?family=Baloo|Indie+Flower|Noto+Sans" rel="stylesheet">
+	
+</head>
+<body>
+<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="home.html">
+					
+					<div class="Logo">
+						<span id="step">S<span id="hotBlue">T</span>E<span id="hotCyan">P</span></span>
+						<span id="by">by</span>
+						<span id="step"><span id="darkOrange">S</span><span id="hotCyan">T</span><span id="hotBlue">E</span>P</span>
+					</div>
+					
+					</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right mainNav">
+					<li class="c1 active"><a href="home.html">Home</a></li>
+					<li class="c2"><a href="about.html">About</a></li>
+					<li class="c3"><a href="contact.html">Contact</a></li>
+					<li class="c4"><a href="login.html">Login</a></li>
+					<li class="c5"><a href="register.html">Register</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+	<!-- /.navbar -->
+
+	
+	
+	  <div class="container-fluid AddGameBody" ng-controller="TodoListController as todoList">
+    <div class="row">
+		<div class="col-xs-12 ">
+
+		<div class="col-md-6 border-Tag-right">
+		<h2 id="center-tag-login">Game</h2>
+		<div >
+
+		
+			 <label>Lesson ID</label>
+			 <input type="text" name="lessonId" class="form-control Form-Tag-Input01" ng-model="todoList.lessonId"/ required>
+
+			 <label>Game ID</label>
+			 <input type="text" name="gameId" class="form-control Form-Tag-Input01" ng-model="todoList.gameId"/ required>
+			 
+			 <label>Game Name</label>
+			 <input type="text" name="name" class="form-control Form-Tag-Input01" ng-model="todoList.gameName"/ required>
+		  
+			 <label>Game Description</label>  
+			 <input type="text" name="description" class="form-control Form-Tag-Input01" ng-model="todoList.gameDescription"/ required>
+		  
+			 <label>Game Type</label>
+			 <input type="text" name="type" class="form-control Form-Tag-Input01" ng-model="todoList.gameType"/ required>
+
+			 <br><br>
+			 
+	<form ng-submit="todoList.addQ()" class="border-Tag-Top">
+        <input type="text" ng-model="todoList.score" size="30" placeholder="add score here" class="form-control Form-Tag-Input01">
+		<br>
+        <input type="text" ng-model="todoList.type" size="30" placeholder="add TF here" class="form-control Form-Tag-Input01">
+        <br>
+		<input type="text" ng-model="todoList.content" size="30" placeholder="add TF Content here" class="form-control Form-Tag-Input01">
+        <br>
+		<input type="text" ng-model="todoList.answer1" size="30" placeholder="add T/F here" class="form-control Form-Tag-Input01">
+        <br>
+		<input class="btn btn-lg btn-primary btn-block " type="submit" value="add">
+    </form>
+			 
+			 
+	</div>
+	</div>
+	
+	<div class="col-md-6">
+    
+		<h2 id="center-tag-login">Questions</h2>
+	
+	    [ <a href="" ng-click="todoList.post()">post</a> ]
+    <ul class="unstyled">
+        <li ng-repeat="todo in todoList.todos">
+            <label class="checkbox Questions_Answer col-sm-5">
+                <span>Score:</span>
+                <span >{{todo.score}}</span>
+                <br>
+            <span>Type:</span>
+				<span >{{todo.type}}</span>
+                <br>
+			<span>Content:</span>	
+                <span >{{todo.content}}</span>
+                <br>
+			<span>Answer:</span>	
+                <span >{{todo.answer1}}</span>
+            </label>
+        </li>
+    </ul>
+	
+	</div>
+	</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="/js/game.js"></script>
+</head>
+<body>
+<h2>Game</h2>
+<div id="controllerID" ng-controller="TodoListController as todoList">
+
+
+	<form ng-submit="todoList.getfunction()" class="border-Tag-Top">
+	     <label>Game ID</label>
+	     <input type="text" name="gameId" class="form-control" ng-model="todoList.gameId"/>
+		<input class="btn btn-lg btn-primary btn-block " type="submit" value="StartGame">
+    </form>
+
+    [ <a href="" ng-click="todoList.submit()">submit</a> ]
+    <br>
+    <span>SCORE : </span>{{todoList.Fscore}}
+    <ul class="unstyled">
+        <li ng-repeat="todo in todoList.todos">
+            <label class="checkbox">
+                <span >{{todo.content}}</span>
+                <br>
+    			<form ng-submit="todoList.addA()">
+            		<input type="text" ng-model="todoList.answer" size="30" placeholder="add T/F here">
+					<input class="btn btn-lg btn-primary btn-block " type="submit" value="submit">
+        		</form>
+        	</label>
+        </li>
+    </ul>
+</div>
+
+
+</body>
+</html>

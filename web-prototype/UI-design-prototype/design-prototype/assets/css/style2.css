@@ -1,0 +1,223 @@
+#center-tag-login
+{
+  text-align: center;
+}
+
+.Left-Tag-Login{
+   margin-left:2%;
+	margin-right:2%;
+
+}
+
+.form-signin>.form-signin-div
+{
+	margin-left:20%;
+	display:block
+}
+
+.form-signin>.form-signin-div1
+{
+	margin-left:20%;
+	display:block
+}
+
+.form-signin>.Form-Tag-Input
+{
+
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top:3%;
+  margin-bottom:3%;
+}
+
+
+.form-signin>.form-signin-div>.Form-Tag-Input01
+{
+	 width: 35%;
+	  margin-right:3%;
+	margin-bottom:3%;
+	display:block;
+	height: 34px;
+	font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .1
+}
+
+.form-signin>.form-signin-div>.Form-Tag-Input02
+{
+	display:block;
+	width: 35%;
+	margin-left:3%;
+	margin-bottom:3%;
+	height: 34px;
+	
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+
+
+.right-Tag-Login
+{
+	background-color:#f1f1f1;
+	margin-left:2%;
+	margin-right:2%;
+	padding-bottom:3%;
+}
+
+.navbar
+{
+	background-color:#f1f1f1;
+}
+
+.Margin-Tag-Buttom
+{
+	margin-bottom:5%;
+}
+
+#Form-Tag-Input
+{
+	margin-left:20%
+}
+
+.footer2
+{
+	margin-top:5%;
+}
+
+.Radio-Tag-Form{
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top:3%;
+  margin-bottom:3%;
+}
+.Body-Tag-Login>.BackgroundImage{
+  width:100%;
+  height: 489px;
+  background-image: url('../images/slides/img2-blur.png');
+  
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ 
+ 
+}
+
+.Body-Tag-Login
+{
+	 padding-left:0px;
+	padding-right:0px
+}
+
+.Body-Tag-Login>.BackgroundImage>.Form-SignIn
+{
+	    margin-top: 10%;
+		-webkit-filter: blur(0px);
+		-moz-filter: blur(0px);
+		-o-filter: blur(0px);
+		-ms-filter: blur(0px);
+		filter: blur(0px);
+}
+.Form-Tag-Input023
+{
+  margin-left: 8%;
+  
+  margin-bottom:3%;
+  
+}
+
+.divider_Tag
+{
+	border-top:1px solid yellow;
+}
+
+.footer04
+{
+	margin-top:0px;
+	 cursor:pointer;
+}
+
+.grey-box-icon
+{
+	 cursor:pointer;
+}
+
+.tooltip
+{
+    position: absolute;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip-left {
+    bottom: 19%;
+    left: 75%;
+}
+
+.tooltip-right {
+    bottom: -12%;
+    right: 75%;
+}
+
+.border-Tag-Top
+{
+	padding-top:50px;
+	border-top:2px solid #DDD;
+}
+
+.Radio-Tag-Form:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.AddGameBody
+{
+	padding-bottom:70px
+}
+
+.FooterFail
+{
+	margin-top:0px;
+}
+
+
+.border-Tag-right
+{
+	border-right:1px solid #DDD;
+}
+
+.Questions_Answer
+{
+	background-color:#DDf;
+	margin:3px;
+	padding:5px;
+}

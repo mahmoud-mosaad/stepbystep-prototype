@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+</head>
+<body ng-app="app" ng-controller="deleteController">
+
+   <div ng-controller="deleteController">
+        <form name="topicForm" ng-submit="submitForm()">
+            <label>ID</label>  
+            <input type="number" name="id" class="form-control" ng-model="id"/>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+     
+
+    <script type="text/javascript">
+    var app = angular.module('app', []);
+    app.controller('deleteController', function($scope, $http, $location) {
+        $scope.submitForm = function(){
+            var url = '/games/' + $scope.id; //$location.absUrl() + "postcustomer";
+             
+            var config = {
+                    headers : {
+                        'Content-Type': 'application/json;charset=utf-8;'
+                    }
+            }
+            var data = {
+            		
+            };
+             
+             
+            $http.delete(url, data, config).then(function (response) {
+                $scope.postResultMessage = "Sucessful!";
+            }, function (response) {
+                $scope.postResultMessage = "Fail!";
+            });
+             
+            $scope.id = "";
+        }
+    });
+    </script>
+</body>
+</html>

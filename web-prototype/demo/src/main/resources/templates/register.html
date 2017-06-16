@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="free-educational-responsive-web-template-webEdu">
+	<meta name="author" content="webThemez.com">
+	<title> StepByStep Learning WebSite</title>
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style2.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/cLogo.css">
+	<link href="https://fonts.googleapis.com/css?family=Baloo|Indie+Flower|Noto+Sans" rel="stylesheet">
+
+</head>
+<body>
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="home.html">
+					<!--<img src="assets/images/logo.png" alt="Techro HTML5 template"></a>-->
+					<div class="Logo">
+						<span id="step">S<span id="hotBlue">T</span>E<span id="hotCyan">P</span></span>
+						<span id="by">by</span>
+						<span id="step"><span id="darkOrange">S</span><span id="hotCyan">T</span><span id="hotBlue">E</span>P</span>
+					</div>
+					</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right mainNav">
+					<li class="c1">
+						<a href="/login">
+							Login
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+	<!-- /.navbar -->
+
+
+<div class="container">
+	<div class="row">
+	<h1 id="center-tag-login" class="Margin-Tag-Buttom"> Create your StepByStep Account </h1>
+	<div class="col-md-12">
+	<div class="Left-Tag-Login col-md-5">
+		<div>
+			<p id="center-tag-login" class="fSize20">Hello</p>
+			<br>
+			<p id="center-tag-login" class="fSize30">One account is all you need</p>
+			<br>
+			<p id="center-tag-login" class="fSize20">Please Follow US</p>
+		</div>
+		
+		<div class="social1 text-center mrgnbottom">
+			<a href="#"><i class="fa fa-twitter"></i></a>
+			<a href="#"><i class="fa fa-facebook"></i></a>
+			<a href="#"><i class="fa fa-dribbble"></i></a>
+			<a href="#"><i class="fa fa-flickr"></i></a>
+			<a href="#"><i class="fa fa-github"></i></a>
+		</div>
+		
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+
+  
+  <div class="carousel-inner" role="listbox">
+    <div class="item active center BGColor">
+     <p id="center-tag-login">Change is the end result of all true learning.</p>
+	 <span id="rightQuote">"Leo Buscaglia"</span>
+    </div>
+    <div class="item BGColor">
+    <p id="center-tag-login"> I learned the value of hard work by working hard.</p>
+	<span id="rightQuote">"Margaret Mead"</span>
+    </div>
+    
+  </div>
+
+</div>
+		
+	</div>
+
+	<div class="col-md-5 right-Tag-Login">
+		<form autocomplete="off" th:action="@{/register}" onsubmit="return validateForm()"
+			 th:object="${user}" method="post" class="form-horizontal  form-signin-div"
+				role="form" name="myform">
+			<h3 class="form-signin-heading" th:text="Welcome"></h3>
+			
+
+		
+			<div class="col-sm-9 ">
+					<label th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="validation-message"></label>
+					<input type="text" th:field="*{firstName}" placeholder="First Name" id="FName" name="FName" class="form-control" required/>
+			</div>
+		
+
+		<div class="col-sm-9 ">
+			<label th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="validation-message"></label>
+			<input type="text" th:field="*{lastName}" placeholder="Last Name" id="LName" name="LName" class="form-control" required/>
+		</div>
+			
+		<div class="col-sm-9 ">
+			<label th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}" class="validation-message"></label>
+			<input type="text" th:field="*{userName}" placeholder="User Name" id="UName" name="UName" class="form-control" required/>
+		</div>
+		
+		<div class="col-sm-9 mrgnbottom">
+			<label th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="validation-message"></label>
+			<input type="password" th:field="*{password}" placeholder="Password" id="password1" name="password1" class="form-control" required/>
+		</div>
+		
+		<div class="col-sm-9 ">
+			<input type="password" placeholder="Confirm Password" id="password2" name="password2" class="form-control" required/>
+		</div>
+		
+		<div class="col-sm-9 ">
+			<label th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="validation-message"></label>
+			<input type="email" th:field="*{email}" placeholder="Your Email" id="Email" name="Email" class="form-control" required/>
+		</div>
+		
+		
+		<div class="col-sm-9 mrgnbottom">
+			<label th:if="${#fields.hasErrors('age')}" th:errors="*{age}" class="validation-message"></label>
+			<input type="number" th:field="*{age}" placeholder="Age" id="Age" name="Age" class="form-control" min="13" max="100" required/>
+		</div>
+		
+		<div class="col-sm-4 mrgnbottom"  id="type-group">
+									 
+			<select th:field="*{type}" id="Type" name="Type">
+
+			<option selected="selected" value="student">Student</option>
+			<option  value="teacher">Teacher</option>
+									  
+			</select>
+									
+		</div>
+		
+		
+		
+		<div id="gender-group" class="col-sm-4 mrgnbottom">
+											
+			<select th:field="*{gender}" id="Gender" name="Gender">					
+				 <option selected="selected" value="male">Male</option>
+				 <option  value="female">Female</option>
+			</select>					
+		</div>
+		
+		<div class="col-sm-9">
+		<p id="error" style ="color :red"></p>
+			<p th:if="${param.error}" style="font-size: 20; color: #FF1C19;" hidden>Email or Password invalid, please verify</p>
+			<button type="submit" class="btn btn-primary btn-block">Register</button>
+		</div>
+		
+						
+		<span th:utext="${successMessage}"></span>
+						
+</form>
+			
+		</div>
+	</div>
+</div>
+	</div>
+
+
+
+
+	
+
+
+      <!-- FOOTER -->
+
+
+			<div class="clear"></div>
+			<!--CLEAR FLOATS-->
+		</div>
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-6 panel">
+						<div class="panel-body">
+							<p class="simplenav">
+								<a href="home.html">Home</a> |
+								<a href="about.html">About</a> |
+								<a href="contact.html">Contact</a>
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 panel">
+						<div class="panel-body">
+							<p class="text-right">
+								Copyright &copy; 2014. Template by <a href="http://webthemez.com/" rel="develop">WebThemez.com</a>
+							</p>
+						</div>
+					</div>
+
+				</div>
+				<!-- /row of panels -->
+			</div>
+		</div>
+	</footer>
+
+	
+	
+	
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<script type="text/javascript">$('.carousel').carousel();</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="assets/js/modernizr-latest.js"></script>
+	<script type='text/javascript' src='assets/js/jquery.min.js'></script>
+    <script type='text/javascript' src='assets/js/fancybox/jquery.fancybox.pack.js'></script>
+    <script type='text/javascript' src='assets/js/jquery.mobile.customized.min.js'></script>
+    <script type='text/javascript' src='assets/js/jquery.easing.1.3.js'></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src='assets/js/myJava.js'></script>
+	
+	 
+
+
+</body>
+</html>

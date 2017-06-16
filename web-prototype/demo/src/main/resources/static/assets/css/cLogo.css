@@ -1,0 +1,30 @@
+.Logo {
+    text-decoration: underline;
+    color: #00ff00;
+    width: 190px;
+}
+
+.Logo>#step {
+    color: #ff5555;
+    font-family: 'Baloo', cursive;
+    /*font-family: 'Gloria Hallelujah', cursive;*/
+    font-size: 30px;
+}
+
+.Logo>#by {
+    font-family: 'Indie Flower', cursive;
+    color: #55dc65;
+    font-size: 23px;
+}
+
+#hotBlue {
+    color: #40abdb;
+}
+
+#hotCyan {
+    color: #a75bba;
+}
+
+#darkOrange {
+    color: #f9ba36;
+}
