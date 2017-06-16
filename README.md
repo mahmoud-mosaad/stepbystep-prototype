@@ -1,4 +1,4 @@
-# stepbystep
+# stepbystep-prototype
 
 Project (WebSite) aim to learn any person in any field with easy steps (By Mini Games).
 
